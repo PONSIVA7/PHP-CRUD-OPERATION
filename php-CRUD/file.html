@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookies</title>
+</head>
+<body>
+    <?php
+    Setcookie("user","siva");
+    ?>
+    <form>
+        <input type="text" name="username">
+    </form>
+    <?php
+    if(! isset($_COOKIE['user'])){
+        echo "sorry, cookie is not found!";
+    }else{
+        echo "<br/>cookie value :" .$_COOKIE['user'];
+    }
+    ?>
+    
+</body>
+</html>
